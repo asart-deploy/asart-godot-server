@@ -1,1 +1,6 @@
-FROM
+FROM 894875581636.dkr.ecr.us-east-1.amazonaws.com/haproxy-2.3.3-alpine:latest
+
+ADD ./godot.64 ./
+ADD ./asart-game-server.pck ./
+
+CMD ./godot.64 --main-pack asart-game-server.pck
